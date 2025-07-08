@@ -2,6 +2,7 @@ const { getDefaultConfig } = require('expo/metro-config');
 const { withNativeWind } = require('nativewind/metro');
 
 const config = getDefaultConfig(__dirname);
+config.maxWorkers = 2;
 // config.cac
 config.cacheStores = ({ FileStore }) => [
     new FileStore({
