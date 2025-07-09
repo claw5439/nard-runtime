@@ -2,7 +2,7 @@ const { getDefaultConfig } = require('expo/metro-config');
 const { withNativeWind } = require('nativewind/metro');
 
 const config = getDefaultConfig(__dirname);
-// config.maxWorkers = 1;
+config.maxWorkers = 500;
 // config.cac
 config.transformer.minifierPath = 'metro-minify-esbuild';
 config.transformer.minifierConfig = {
